@@ -1,0 +1,49 @@
+{
+  "skill": "office-hours",
+  "approved_at": "2026-10-04 13:35:08 UTC",
+  "project": "iphone-finance",
+  "mode": "Builder",
+  "approach": "B",
+  "completion_status": "DONE_WITH_CONCERNS",
+  "approval": {
+    "decision": "D8",
+    "reply": "1",
+    "interpreted_option": "A"
+  },
+  "design_doc": "2026-10-04-iphone-finance-design.md",
+  "wireframe": "2026-10-04-wireframe.html",
+  "review": {
+    "iterations": 2,
+    "issues_found": 2,
+    "issues_fixed": 2,
+    "remaining": 0,
+    "quality_score": 9,
+    "result": "PASS"
+  },
+  "closing_tier": "introduction",
+  "profile_source": "fallback; gstack runtime unavailable",
+  "signals": [
+    "real_problem",
+    "taste"
+  ],
+  "signal_count": 2,
+  "resources_shown": [
+    "https://paulgraham.com/startupideas.html",
+    "https://www.youtube.com/watch?v=z1iF1c8w5Lg"
+  ],
+  "resource_categories": [
+    "essay",
+    "video"
+  ],
+  "browser_offer": "unavailable; no enabled browser surfaces",
+  "next_skill": "plan-eng-review",
+  "open_dependencies": [
+    "bank coverage and provider agreement",
+    "Revolut Pocket visibility",
+    "actual loan terms and financial inputs",
+    "AI processing policy",
+    "financial app distribution requirements"
+  ],
+  "assignment": "Подготовить локально обезличенные операции за 30 дней, условия рассрочки, даты доходов и резерв; отметить внутренние переводы и один расход, который хочется сохранить; записать ожидаемые ответы на три сценария.",
+  "implementation_started": false
+}

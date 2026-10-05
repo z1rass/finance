@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Финансы — эскиз сценариев</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fafafa; color: #171717; font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 1220px; margin: auto; padding: 34px 28px; }
+  h1 { font-size: 25px; font-weight: 600; letter-spacing: -.6px; margin: 0 0 8px; }
+  .intro { max-width: 780px; color: #666; margin: 0 0 30px; }
+  .screens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+  .step { margin: 0 0 10px; color: #666; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  .phone { background: white; border: 1px solid #aaa; border-radius: 27px; min-height: 730px; overflow: hidden; display: flex; flex-direction: column; }
+  .status { padding: 15px 22px 8px; display: flex; justify-content: space-between; font-size: 11px; }
+  .screen { padding: 18px 22px; flex: 1; }
+  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  h2 { font-size: 24px; letter-spacing: -.6px; font-weight: 600; margin: 0; }
+  h3 { font-size: 16px; margin: 0 0 8px; font-weight: 600; }
+  p { margin: 0 0 12px; }
+  .muted { color: #666; font-size: 12px; }
+  .eyebrow { font-size: 11px; color: #666; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 4px; }
+  .section { padding: 22px 0; border-bottom: 1px solid #ddd; }
+  .large { font-size: 48px; font-weight: 500; letter-spacing: -2px; line-height: 1.15; margin: 9px 0; }
+  .row { display: flex; justify-content: space-between; gap: 18px; padding: 6px 0; }
+  .row span:last-child { text-align: right; }
+  .track { height: 5px; background: #e6e6e6; margin: 15px 0 8px; }
+  .fill { height: 100%; width: 36%; background: #222; }
+  .outline { border: 1px solid #aaa; border-radius: 6px; padding: 12px; margin-top: 12px; }
+  .button { border: 1px solid #555; border-radius: 5px; padding: 10px 12px; font: inherit; font-size: 13px; color: #222; background: white; text-align: center; display: block; width: 100%; margin-top: 11px; }
+  .button:disabled { opacity: 1; }
+  .nav { border-top: 1px solid #ddd; display: flex; justify-content: space-around; padding: 15px 6px 21px; color: #888; font-size: 12px; }
+  .nav .active { color: #171717; font-weight: 600; }
+  .message { padding: 14px 0; border-bottom: 1px solid #e3e3e3; }
+  .speaker { color: #666; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 7px; }
+  .message p:last-child { margin-bottom: 0; }
+  .user { padding-left: 15px; border-left: 1px solid #aaa; margin: 13px 0; }
+  .input { border: 1px solid #aaa; padding: 12px; color: #777; font-size: 13px; border-radius: 5px; margin-top: 16px; }
+  .timeline { display: flex; justify-content: space-between; border-bottom: 1px solid #aaa; padding: 14px 0 7px; margin-bottom: 12px; color: #777; font-size: 11px; }
+  .timeline strong { color: #222; }
+  .date { font-size: 28px; font-weight: 500; letter-spacing: -.6px; line-height: 1.25; margin: 7px 0; }
+  .notes { margin-top: 25px; max-width: 900px; color: #666; font-size: 12px; }
+  @media (max-width: 1000px) { .screens { gap: 16px; } main { padding: 25px 16px; } .screen { padding: 16px; } .phone { min-height: 760px; } }
+  @media (max-width: 780px) { .screens { grid-template-columns: 1fr; max-width: 370px; margin: auto; gap: 30px; } .phone { min-height: 700px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Финансы. Три основных сценария</h1>
+  <p class="intro">Черновой эскиз структуры, а не финальный дизайн. Демонстрационные суммы и даты не описывают твой реальный бюджет. Из разговора взят только лимит 50 € в неделю. Элементы эскиза не выполняют действий.</p>
+  <div class="screens">
+    <section aria-label="Экран обзора">
+      <p class="step">01 · Понимаю, где нахожусь</p>
+      <div class="phone">
+        <div class="status"><span>9:41</span><span>··· ▰</span></div>
+        <div class="screen">
+          <div class="top"><h2>Обзор</h2><span class="muted">4 октября</span></div>
+          <!-- Freshness is visible before totals. A stale or incomplete connection replaces this line with a warning. -->
+          <p class="muted" style="margin-top:8px">N26 · Revolut / обновлено 5 мин назад</p>
+          <div class="section">
+            <p class="eyebrow">Осталось на эту неделю</p>
+            <div class="large">32 €</div>
+            <div class="track"><div class="fill"></div></div>
+            <div class="row muted"><span>Потрачено 18 € из 50 €</span><span>Еще 4 дня</span></div>
+          </div>
+          <div class="section">
+            <h3>План месяца</h3>
+            <div class="row"><span>Обязательные платежи</span><span>Зарезервированы</span></div>
+            <div class="row"><span>Лимит недели</span><span>50 €</span></div>
+            <div class="row"><span>На досрочное погашение</span><span>100 € / месяц</span></div>
+            <!-- Internal transfers between owned accounts do not count as spending. Reserved funds do not count as free-to-spend. -->
+          </div>
+          <div class="section" style="border-bottom:0">
+            <p class="eyebrow">MacBook · остаток 1 200 €</p>
+            <div class="date">6 января 2027</div>
+            <p class="muted">Прогноз при текущем плане. Открыть расчет и сравнить сценарии.</p>
+            <button class="button" disabled>Посмотреть план погашения →</button>
+          </div>
+          <div class="outline">
+            <p style="font-size:13px;margin-bottom:0">Что изменится, если я куплю AirPods за 200 €?</p>
+          </div>
+        </div>
+        <div class="nav"><span class="active">Обзор</span><span>План</span><span>Ассистент</span></div>
+      </div>
+    </section>
+    <section aria-label="Экран ассистента">
+      <p class="step">02 · Нахожу подходящую экономию</p>
+      <div class="phone">
+        <div class="status"><span>9:41</span><span>··· ▰</span></div>
+        <div class="screen">
+          <h2>Ассистент</h2>
+          <p class="muted" style="margin-top:8px">Учитывает операции и твои приоритеты</p>
+          <div class="message user"><p class="speaker">Ты</p><p>Где я могу сократить расходы?</p></div>
+          <div class="message"><p class="speaker">Ассистент</p><p>В этом месяце на пиццу ушло 30 €. Это обычный перекус или встречи с друзьями?</p><p class="muted">Основание: 3 операции · открыть</p></div>
+          <div class="message user"><p class="speaker">Ты</p><p>Мы так встречаемся с друзьями. Это хочу сохранить.</p></div>
+          <div class="message"><p class="speaker">Ассистент</p><p>Тогда учтем 30 € в плане досуга. Давай посмотрим на расходы, которые для тебя менее важны.</p></div>
+          <!-- The assistant proposes a plan change. Explicit confirmation saves both the budget change and this preference. -->
+          <div class="outline">
+            <p class="eyebrow">Предложение · еще не применено</p>
+            <p style="font-size:13px">Запланировать 30 € / месяц на встречи с друзьями.</p>
+            <p class="muted">Эта сумма входит в общий бюджет досуга и учитывается один раз.</p>
+            <button class="button" disabled>Подтвердить изменение</button>
+          </div>
+          <div class="input">Спроси о своем бюджете…</div>
+        </div>
+        <div class="nav"><span>Обзор</span><span>План</span><span class="active">Ассистент</span></div>
+      </div>
+    </section>
+    <section aria-label="Экран сравнения покупки и погашения">
+      <p class="step">03 · Вижу последствия покупки</p>
+      <div class="phone">
+        <div class="status"><span>9:41</span><span>··· ▰</span></div>
+        <div class="screen">
+          <div class="top"><h2>План</h2><span class="muted">MacBook</span></div>
+          <div class="section">
+            <p class="eyebrow">При текущих взносах</p>
+            <div class="date">6 января 2027</div>
+            <div class="timeline"><span>Окт</span><span>Ноя</span><span>Дек</span><strong>Янв · закрыто</strong></div>
+            <p class="muted">Регулярный платеж 200 € + досрочно 100 € в месяц.</p>
+          </div>
+          <div class="section">
+            <p class="eyebrow">Сценарий: AirPods за 200 €</p>
+            <p style="font-size:13px">Оплатить покупку из двух запланированных досрочных взносов по 100 €.</p>
+            <div class="row"><span>Закрытие рассрочки</span><strong>6 февраля</strong></div>
+            <div class="row"><span>Разница с планом</span><strong>+1 платеж</strong></div>
+            <p class="muted" style="margin-top:9px">Сценарий не изменяет бюджет, пока ты его не подтвердишь.</p>
+          </div>
+          <div class="section" style="border-bottom:0">
+            <h3>Что для тебя важнее?</h3>
+            <button class="button" disabled>Сохранить текущую дату погашения</button>
+            <button class="button" disabled>Рассмотреть покупку и сдвиг даты</button>
+            <!-- Affordability is withheld unless income, upcoming obligations, balance freshness and chosen reserve are sufficiently known. -->
+            <p class="muted" style="margin-top:12px">Чтобы оценить доступность покупки, также нужны доходы, будущие платежи и твой резерв.</p>
+          </div>
+        </div>
+        <div class="nav"><span>Обзор</span><span class="active">План</span><span>Ассистент</span></div>
+      </div>
+    </section>
+  </div>
+  <p class="notes">Основа учебного расчета: остаток 1 200 €, ставка 0 %, досрочное погашение разрешено без комиссии. Ближайший платеж — 6 октября 2026. Покупка в примере заменяет только дополнительные взносы октября и ноября. Условия твоей реальной рассрочки пока неизвестны.</p>
+</main>
+</body>
+</html>
